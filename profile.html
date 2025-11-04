@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya - UR WORLD</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="./components.css"> 
+    <link rel="stylesheet" href="./icons.css"> 
+    
+</head>
+<body class="page-app page-profile">
+    <div class="app-wrapper">
+        <div class="app-container">
+            <header class="app-header-green">
+                <nav class="app-nav">
+                    <a href="pilih-dunia.html">
+                         <svg class="icon" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 4px;"><use href="#icon-arrow-left"></use></svg>
+                        Kembali
+                    </a>
+                    <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+                        <svg class="icon"><use href="#icon-menu"></use></svg>
+                    </button>
+                </nav>
+                <div class="app-header-content">
+                    <div class="profile-avatar">
+                        <img src="./Asset/MASCOT.png" alt="Avatar" id="avatarImg">
+                        <button class="avatar-edit-btn" aria-label="Edit Avatar">
+                            <svg class="icon" style="width: 16px; height: 16px;"><use href="#icon-camera"></use></svg>
+                        </button>
+                    </div>
+                    <h1 id="userName">Pengguna UR WORLD</h1>
+                    <p class="subtitle">Level <span id="userLevel">1</span> Explorer</p>
+                </div>
+            </header>
+            
+            <main class="app-content-white">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="pilih-dunia.html">Beranda</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-current">Profil Saya</span>
+                </nav>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg class="icon"><use href="#icon-book-open"></use></svg>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="completedModules">0</div>
+                            <div class="stat-label">Modul Selesai</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg class="icon"><use href="#icon-star"></use></svg>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="totalPoints">0</div>
+                            <div class="stat-label">Total Poin</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                             <svg class="icon"><use href="#icon-trophy"></use></svg>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="achievements">0</div>
+                            <div class="stat-label">Pencapaian</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                             <svg class="icon"><use href="#icon-zap"></use></svg>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="streak">0</div>
+                            <div class="stat-label">Hari Beruntun</div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="profile-section">
+                    <h2><svg class,"icon" style="width:20px; height:20px; vertical-align: -3px; margin-right: 4px;"><use href="#icon-trending-up"></use></svg> Progress Belajar</h2>
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span><svg class="icon" style="width:16px; height:16px; vertical-align: -2px; margin-right: 4px;"><use href="#icon-atom"></use></svg> Dunia Fisika</span>
+                            <span class="progress-percent" id="physicsPercent">0%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill physics-progress" id="physicsBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span><svg class="icon" style="width:16px; height:16px; vertical-align: -2px; margin-right: 4px;"><use href="#icon-dna"></use></svg> Dunia Biologi</span>
+                            <span class="progress-percent" id="biologyPercent">0%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill biology-progress" id="biologyBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="profile-section">
+                    <h2><svg class="icon" style="width:20px; height:20px; vertical-align: -3px; margin-right: 4px;"><use href="#icon-award"></use></svg> Pencapaian</h2>
+                    <div class="achievements-grid" id="achievementsGrid">
+                        </div>
+                </section>
+
+                <section class="profile-section">
+                    <h2><svg class="icon" style="width:20px; height:20px; vertical-align: -3px; margin-right: 4px;"><use href="#icon-clipboard"></use></svg> Aktivitas Terakhir</h2>
+                    <div class="activity-list" id="activityList">
+                        </div>
+                </section>
+
+                <section class="profile-section">
+                    <h2><svg class="icon" style="width:20px; height:20px; vertical-align: -3px; margin-right: 4px;"><use href="#icon-settings"></use></svg> Pengaturan Akun</h2>
+                    <div class="settings-list">
+                        <a href="settings.html" class="setting-item">
+                            <span>
+                                <svg class="icon icon-inline"><use href="#icon-settings"></use></svg>
+                                Pengaturan
+                            </span>
+                            <svg class="icon icon-arrow"><use href="#icon-arrow-right"></use></svg>
+                        </a>
+                        <button class="setting-item" id="editProfileBtn">
+                            <span>
+                                <svg class="icon icon-inline"><use href="#icon-edit"></use></svg>
+                                Edit Profil
+                            </span>
+                            <svg class="icon icon-arrow"><use href="#icon-arrow-right"></use></svg>
+                        </button>
+                        <button class="setting-item" id="logoutBtn">
+                            <span>
+                                <svg class="icon icon-inline"><use href="#icon-log-out"></use></svg>
+                                Keluar
+                            </span>
+                            <svg class="icon icon-arrow"><use href="#icon-arrow-right"></use></svg>
+                        </button>
+                    </div>
+                </section>
+            </main>
+        </div>
+        
+        <nav class="app-bottom-nav">
+            <a href="pilih-dunia.html" aria-label="Home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <use href="#icon-home"></use>
+                </svg>
+                <span>Beranda</span>
+            </a>
+            <a href="profile.html" class="active" aria-label="Profil">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <use href="#icon-user"></use>
+                </svg>
+                <span>Profil</span>
+            </a>
+        </nav>
+
+        <div id="sidebarOverlay" class="sidebar-overlay"></div>
+        <aside id="sidebarMenu" class="sidebar-menu">
+            <div class="sidebar-header">
+                <h3>Menu</h3>
+                <button id="sidebarClose" class="sidebar-close" aria-label="Tutup menu">
+                     <svg class="icon"><use href="#icon-close"></use></svg>
+                </button>
+            </div>
+            <div class="sidebar-content">
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item">
+                        <a href="pilih-dunia.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon"><svg class,"icon"><use href="#icon-home"></use></svg></span>
+                            <span>Beranda</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="dunia-fisika.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon"><svg class="icon"><use href="#icon-atom"></use></svg></span>
+                            <span>Dunia Fisika</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="dunia-biologi.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon"><svg class="icon"><use href="#icon-dna"></use></svg></span>
+                            <span>Dunia Biologi</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="profile.html" class="sidebar-nav-link active">
+                            <span class="sidebar-nav-icon"><svg class="icon"><use href="#icon-user"></use></svg></span>
+                            <span>Profil Saya</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="settings.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon"><svg class="icon"><use href="#icon-settings"></use></svg></span>
+                            <span>Pengaturan</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="welcome.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon"><svg class="icon"><use href="#icon-log-out"></use></svg></span>
+                            <span>Keluar</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script src="./icons.js"></script>
+    <script src="./nav.js"></script>
+    <script src="./profile.js"></script> 
+</body>
+</html>

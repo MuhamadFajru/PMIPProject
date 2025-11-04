@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Sel Tumbuhan - UR WORLD</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="./icons.css">
+</head>
+<body class="page-app page-kuis">
+    <div class="app-wrapper">
+        <div class="app-container">
+            <header class="app-header-green">
+        <nav class="app-nav">
+        <a href="kuis-sel-tumbuhan-2.html">&lt; Kembali</a>
+        <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button> 
+        <a href="pilih-dunia.html" id="nextQuiz" class="hidden">Selesai &gt;</a> 
+        </nav>
+        <div class="app-header-content">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+        </div>
+         </header>
+            
+        <main class="app-content-white">
+            <div class="quiz-header">
+                <h2>Pertanyaan 3 dari 3</h2>
+                <p>Kuis Biologi - Sel Tumbuhan</p>
+            </div>
+
+            <p class="quiz-question" id="quizQuestion">
+                Fungsi utama dari Vakuola Sentral yang besar pada sel tumbuhan dewasa adalah...
+            </p>
+
+            <div class="quiz-options" id="quizOptions" role="radiogroup" aria-labelledby="quizQuestion">
+                <button class="quiz-option" data-correct="false" role="radio" aria-checked="false">
+                    <span>Menghasilkan energi (respirasi sel)</span>
+                    <span class="quiz-icon"></span>
+                </button>
+                <button class="quiz-option" data-correct="true" role="radio" aria-checked="false">
+                    <span>Penyimpanan air, nutrisi, dan mempertahankan tekanan turgor</span>
+                    <span class="quiz-icon"></span>
+                </button>
+                <button class="quiz-option" data-correct="false" role="radio" aria-checked="false">
+                    <span>Sintesis protein</span>
+                    <span class="quiz-icon"></span>
+                </button>
+                <button class="quiz-option" data-correct="false" role="radio" aria-checked="false">
+                    <span>Mengatur pergerakan kromatid saat pembelahan sel</span>
+                    <span class="quiz-icon"></span>
+                </button>
+            </div>
+
+            <div class="feedback-box hidden" id="feedbackBox" role="status" aria-live="polite">
+                <p id="feedbackText"></p>
+            </div>
+
+            <div class="next-btn-container">
+                <button class="btn btn-next hidden" id="nextBtn">SELESAI &rarr;</button>
+            </div>
+        </main>
+        </div>
+        
+        <nav class="app-bottom-nav">
+            <a href="pilih-dunia.html" aria-label="Home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                <span>Beranda</span>
+            </a>
+            <a href="profile.html" aria-label="Profil">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span>Profil</span>
+            </a>
+        </nav>
+    </div>
+    <script src="./icons.js"></script>
+     <script src="./quizbaru.js"></script>
+</body>
+</html>

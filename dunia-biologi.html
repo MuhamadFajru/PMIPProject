@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Biologi - UR WORLD</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./icons.css">
+</head>
+<body class="page-app page-modul-list">
+
+    <div class="app-wrapper">
+        <div class="app-container">
+            <header class="app-header-green">
+                <nav class="app-nav">
+                    <a href="pilih-dunia.html">&lt; Kembali</a>
+                    <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
+                </nav>
+                <div class="app-header-content">
+                    <h1>SISTEM BIOLOGI</h1>
+                    <p class="subtitle">Pilih modul untuk belajar</p>
+                </div>
+            </header>
+            
+            <main class="app-content-white">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="pilih-dunia.html">Beranda</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-current">Dunia Biologi</span>
+                </nav>
+
+                <div class="modul-list">
+                    <a href="modul-biologi-1.html" class="btn btn-module-select">
+                        <span class="module-icon">🌱</span>
+                        <div class="module-info">
+                            <div class="module-title">Sel Tumbuhan</div>
+                            <div class="module-desc">Struktur dan Fungsi Sel</div>
+                        </div>
+                    </a>
+                    
+                    <button class="btn btn-module-select module-locked" disabled>
+                        <span class="module-icon">🦠</span>
+                        <div class="module-info">
+                            <div class="module-title">Virus & Bakteri</div>
+                            <div class="module-desc">Mikroorganisme dan Patogen</div>
+                        </div>
+                        <span class="lock-icon">🔒</span>
+                    </button>
+                    
+                    <button class="btn btn-module-select module-locked" disabled>
+                        <span class="module-icon">🧠</span>
+                        <div class="module-info">
+                            <div class="module-title">Sistem Saraf</div>
+                            <div class="module-desc">Regulasi dan Respon Tubuh</div>
+                        </div>
+                        <span class="lock-icon">🔒</span>
+                    </button>
+                    
+                    <button class="btn btn-module-select module-locked" disabled>
+                        <span class="module-icon">🦁</span>
+                        <div class="module-info">
+                            <div class="module-title">Ekosistem</div>
+                            <div class="module-desc">Rantai Makanan dan Habitat</div>
+                        </div>
+                        <span class="lock-icon">🔒</span>
+                    </button>
+                </div>
+            </main>
+        </div>
+        
+        <nav class="app-bottom-nav">
+            <a href="pilih-dunia.html" aria-label="Home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                <span>Beranda</span>
+            </a>
+            <a href="profile.html" aria-label="Profil">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span>Profil</span>
+            </a>
+        </nav>
+
+        <div id="sidebarOverlay" class="sidebar-overlay"></div>
+        <aside id="sidebarMenu" class="sidebar-menu">
+            <div class="sidebar-header">
+                <h3>Menu</h3>
+                <button id="sidebarClose" class="sidebar-close" aria-label="Tutup menu">&times;</button>
+            </div>
+            <div class="sidebar-content">
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item">
+                        <a href="pilih-dunia.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">🏠</span>
+                            <span>Beranda</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="dunia-fisika.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">⚛️</span>
+                            <span>Dunia Fisika</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="dunia-biologi.html" class="sidebar-nav-link active">
+                            <span class="sidebar-nav-icon">🧬</span>
+                            <span>Dunia Biologi</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="profile.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">👤</span>
+                            <span>Profil Saya</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="settings.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">⚙️</span>
+                            <span>Pengaturan</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="welcome.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">🚪</span>
+                            <span>Keluar</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+    <script src="./icons.js"></script>
+    <script src="./nav.js"></script>
+</body>
+</html>

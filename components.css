@@ -1,0 +1,1145 @@
+/* =========================================
+   COMPONENTS.CSS (v2 - Disempurnakan)
+   Gabungan dari profile.css dan settings.css
+   ========================================= */
+
+/* =========================================
+   PROFILE PAGE STYLES
+   ========================================= */
+
+/* Profile Avatar */
+.profile-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid var(--bright-green);
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-edit-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--bright-green);
+    border: 3px solid var(--dark-green);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: var(--dark-green);
+}
+
+.avatar-edit-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Stats Grid - ENHANCED */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* --- PERBAIKAN WARNA IKON STATISTIK --- */
+/* Target .icon di dalam .stat-icon agar lebih spesifik */
+.stat-card:nth-child(1) .stat-icon .icon { color: #3b82f6; } /* Modules */
+.stat-card:nth-child(2) .stat-icon .icon { color: #f59e0b; } /* Points */
+.stat-card:nth-child(3) .stat-icon .icon { color: #10b981; } /* Achievements */
+.stat-card:nth-child(4) .stat-icon .icon { color: #ef4444; } /* Streak */
+
+
+.stat-info {
+    flex: 1;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-grey);
+    font-weight: 500;
+}
+
+/* Profile Sections */
+.profile-section {
+    margin-bottom: 35px;
+}
+
+.profile-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Progress Items */
+.progress-item {
+    background-color: #f8f9fa;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.progress-percent {
+    color: var(--dark-green);
+    font-size: 0.9rem;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 30px 30px;
+    animation: progress-animation 1s linear infinite;
+}
+
+@keyframes progress-animation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 30px 30px;
+    }
+}
+
+.physics-progress {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.biology-progress {
+    background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Achievements Grid */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.achievement-card {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+}
+
+.achievement-card:hover::before {
+    transform: scale(1);
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(253, 203, 110, 0.4);
+}
+
+.achievement-card.locked {
+    background: linear-gradient(135deg, #dfe6e9 0%, #b2bec3 100%);
+    opacity: 0.6;
+}
+
+.achievement-card.unlocked {
+    animation: achievement-unlock 0.6s ease;
+}
+
+@keyframes achievement-unlock {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.achievement-card.locked .achievement-icon {
+    filter: grayscale(100%) opacity(0.5);
+}
+
+.achievement-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.achievement-desc {
+    font-size: 0.8rem;
+    color: var(--text-grey);
+}
+
+/* Activity List */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+}
+
+.activity-icon {
+    font-size: 2rem;
+    min-width: 40px;
+    text-align: center;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-title {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 3px;
+}
+
+.activity-time {
+    font-size: 0.85rem;
+    color: var(--text-grey);
+}
+
+/* Settings List */
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.setting-item:hover {
+    background-color: var(--dark-green);
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+/* --- STYLE UNTUK IKON PANAH BARU --- */
+.setting-item .icon-arrow {
+    width: 20px; /* Sedikit lebih kecil dari default */
+    height: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--text-grey); /* Warna abu-abu standar */
+}
+
+.setting-item:hover .icon-arrow {
+    transform: translateX(5px);
+    color: var(--white); /* Menjadi putih saat hover */
+}
+
+/* --- STYLE UNTUK IKON DI KIRI TEKS --- */
+.setting-item .icon-inline {
+    width: 18px;
+    height: 18px;
+    vertical-align: -3px; /* Sejajarkan dengan teks */
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+/* =========================================
+   SETTINGS PAGE STYLES
+   ========================================= */
+
+.settings-section {
+    margin-bottom: 30px;
+}
+
+.settings-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 20px;
+}
+
+.setting-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.setting-option-info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.setting-option-info p {
+    font-size: 0.85rem;
+    color: var(--text-grey);
+    margin: 0;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    width: 52px;
+    height: 28px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 28px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--dark-green);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --light-grey: #1a1a2e;
+    --white: #16213e;
+    --text-dark: #eee;
+    --text-grey: #bbb;
+    --grey-border: #2d3436;
+}
+
+body.dark-mode .app-content-white {
+    background-color: var(--white);
+}
+
+body.dark-mode .stat-card,
+body.dark-mode .progress-item,
+body.dark-mode .activity-item,
+body.dark-mode .setting-item,
+body.dark-mode .setting-option {
+    background-color: #0f3460;
+}
+
+body.dark-mode .app-bottom-nav {
+    background-color: var(--white);
+    border-top-color: #2d3436;
+}
+
+/* =========================================
+   ENHANCED ANIMATIONS
+   ========================================= */
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.stats-grid .stat-card {
+    animation: slideInUp 0.6s ease backwards;
+}
+
+.stats-grid .stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stats-grid .stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stats-grid .stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stats-grid .stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* =========================================
+   RESPONSIVE IMPROVEMENTS
+   ========================================= */
+
+@media (max-width: 380px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .stat-icon {
+        font-size: 2rem;
+    }
+    
+    .stat-value {
+        font-size: 1.5rem;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .achievements-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =========================================
+   LOADING SPINNER
+   ========================================= */
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--dark-green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 40px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* =========================================
+   MODAL STYLES (from profile.css)
+   ========================================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 90%;
+    width: 400px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideInUp 0.4s ease;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    font-size: 1.5rem;
+    color: var(--dark-green);
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-grey);
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--dark-green);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* =========================================
+   TOAST NOTIFICATIONS (from profile.css)
+   ========================================= */
+
+.toast {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dark-green);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    animation: slideInUp 0.4s ease;
+}
+
+.toast.success {
+    background-color: #27ae60;
+}
+
+.toast.error {
+    background-color: #e74c3c;
+}
+
+.toast.warning {
+    background-color: #f39c12;
+}
+
+/* =========================================
+   FLOATING ACTION BUTTON (from profile.css)
+   ========================================= */
+
+.fab {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--dark-green), var(--light-green));
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.fab:hover {
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.fab:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================================
+   ADDITIONAL STYLES (from settings.css)
+   ========================================= */
+
+/* About Card */
+.about-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+.about-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.about-card p {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.about-desc {
+    line-height: 1.6;
+    margin-top: 15px;
+    margin-bottom: 20px !important;
+}
+
+.about-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.about-link {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.about-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Styles Enhancement */
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.modal-body ul {
+    text-align: left;
+    color: var(--text-dark);
+}
+
+.modal-body ul li {
+    margin-bottom: 8px;
+}
+
+/* Form Input */
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--grey-border);
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--dark-green);
+    box-shadow: 0 0 0 3px rgba(10, 77, 47, 0.1);
+}
+
+/* Toast Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.toast {
+    animation: slideDown 0.4s ease;
+}
+
+/* Input Group Label */
+.input-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* Enhanced Card Hover Effects */
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(10, 77, 47, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+/* Pulse Animation for Streak */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.stat-card:nth-child(4):hover .stat-icon {
+    animation: pulse 1s ease infinite;
+}
+
+/* =========================================
+   ENHANCED QUIZ SYSTEM STYLES (from settings.css)
+   ========================================= */
+
+/* Quiz Timer */
+.quiz-timer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    z-index: 100;
+    animation: fadeInScale 0.4s ease;
+}
+
+.quiz-timer.warning {
+    animation: pulse 0.5s ease infinite;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+/* Quiz Score Display */
+.quiz-score {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 20px;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.quiz-score h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.quiz-score .score-value {
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 20px 0;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-score .score-message {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* Stars Rating */
+.stars-rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.star {
+    color: #ffd700;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    animation: starPop 0.5s ease backwards;
+}
+
+.star:nth-child(1) { animation-delay: 0.1s; }
+.star:nth-child(2) { animation-delay: 0.2s; }
+.star:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes starPop {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Quiz Results Actions */
+.quiz-results-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.quiz-results-actions .btn {
+    width: 100%;
+}
+
+/* =========================================
+   CONFETTI ANIMATION
+   ========================================= */
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #f0f;
+    top: -10px;
+    z-index: 9999;
+    animation: confetti-fall 3s linear forwards;
+}
+
+@keyframes confetti-fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   LOADING STATES
+   ========================================= */
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.skeleton-text {
+    height: 16px;
+    margin-bottom: 10px;
+}
+
+.skeleton-card {
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   EMPTY STATES
+   ========================================= */
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--text-grey);
+}
+
+.empty-state-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   BADGE SYSTEM
+   ========================================= */
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-new {
+    background-color: #3498db;
+    color: white;
+}
+
+.badge-completed {
+    background-color: #27ae60;
+    color: white;
+}
+
+.badge-locked {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.badge-premium {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: #333;
+}
+
+/* =========================================
+   RESPONSIVE ENHANCEMENTS
+   ========================================= */
+
+@media (max-width: 380px) {
+    .about-card {
+        padding: 20px;
+    }
+    
+    .about-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .quiz-timer {
+        top: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+    
+    .quiz-score .score-value {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-links {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .quiz-results-actions {
+        flex-direction: row;
+    }
+}
+
+/* =========================================
+   DARK MODE ADDITIONAL STYLES
+   ========================================= */
+
+body.dark-mode .about-card {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+body.dark-mode .form-input {
+    background-color: #0f3460;
+    border-color: #2d3436;
+    color: #eee;
+}
+
+body.dark-mode .modal-content {
+    background-color: #16213e;
+    color: #eee;
+}
+
+body.dark-mode .modal-body ul {
+    color: #bbb;
+}
+
+body.dark-mode .skeleton {
+    background: linear-gradient(
+        90deg,
+        #2d3436 25%,
+        #34495e 50%,
+        #2d3436 75%
+    );
+}

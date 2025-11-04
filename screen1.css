@@ -1,0 +1,51 @@
+/* =========================================
+   1. SPLASH SCREEN
+   ========================================= */
+body.page-splash {
+    background-color: var(--dark-green);
+}
+
+body.page-splash .app-wrapper {
+    background-color: var(--dark-green);
+    background-image: url('assets/waves.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+#splash-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#splash-link:hover {
+    opacity: 0.95;
+}
+
+#splash-link:active .splash-content {
+    transform: scale(0.98);
+}
+
+.splash-content {
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.splash-content h1 {
+    font-family: var(--font-title);
+    font-size: 4rem;
+    color: var(--bright-green);
+    line-height: 1;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+.splash-content p {
+    font-size: 1.1rem;
+    color: var(--white);
+    opacity: 0.95;
+}

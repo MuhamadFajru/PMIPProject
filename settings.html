@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaturan - UR WORLD</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./components.css">
+    <link rel="stylesheet" href="./icons.css">
+</head>
+<body class="page-app page-settings">
+    <div class="app-wrapper">
+        <div class="app-container">
+            <!-- Header -->
+            <header class="app-header-green">
+                <nav class="app-nav">
+                    <a href="profile.html">&lt; Kembali</a>
+                    <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
+                </nav>
+                <div class="app-header-content">
+                    <h1>PENGATURAN</h1>
+                    <p class="subtitle">Atur preferensi aplikasi Anda</p>
+                </div>
+            </header>
+            
+            <!-- Main Content -->
+            <main class="app-content-white">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="pilih-dunia.html">Beranda</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-current">Pengaturan</span>
+                </nav>
+
+                <!-- Appearance Settings -->
+                <section class="settings-section">
+                    <h2>🎨 Tampilan</h2>
+                    
+                    <div class="setting-option">
+                        <div class="setting-option-info">
+                            <h3>Mode Gelap</h3>
+                            <p>Aktifkan tema gelap untuk kenyamanan mata</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-option">
+                        <div class="setting-option-info">
+                            <h3>Animasi</h3>
+                            <p>Aktifkan efek animasi di aplikasi</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="animationToggle" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Notification Settings -->
+                <section class="settings-section">
+                    <h2>🔔 Notifikasi</h2>
+                    
+                    <div class="setting-option">
+                        <div class="setting-option-info">
+                            <h3>Notifikasi Pencapaian</h3>
+                            <p>Tampilkan notifikasi saat membuka pencapaian baru</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="achievementNotif" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-option">
+                        <div class="setting-option-info">
+                            <h3>Pengingat Belajar</h3>
+                            <p>Ingatkan saya untuk belajar setiap hari</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="studyReminder">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-option">
+                        <div class="setting-option-info">
+                            <h3>Suara</h3>
+                            <p>Aktifkan efek suara</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="soundToggle" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Learning Settings -->
+                <section class="settings-section">
+                    <h2>📚 Pembelajaran</h2>
+                    
+                    <div class="setting-option">
+                        <div class="setting-option-info">
+                            <h3>Mode Latihan</h3>
+                            <p>Izinkan mengulang kuis yang sudah selesai</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="practiceMode" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-option">
+                        <div class="setting-option-info">
+                            <h3>Tampilkan Pembahasan</h3>
+                            <p>Tampilkan penjelasan setelah menjawab kuis</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="showExplanation" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-option">
+                        <div class="setting-option-info">
+                            <h3>Timer Kuis</h3>
+                            <p>Aktifkan penghitung waktu saat mengerjakan kuis</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="quizTimer">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Data & Privacy -->
+                <section class="settings-section">
+                    <h2>🔒 Data & Privasi</h2>
+                    
+                    <button class="setting-item" id="exportDataBtn">
+                        <span>📥 Ekspor Data Belajar</span>
+                        <span class="arrow">→</span>
+                    </button>
+                    
+                    <button class="setting-item" id="clearProgressBtn">
+                        <span>🗑️ Hapus Progress</span>
+                        <span class="arrow">→</span>
+                    </button>
+                    
+                    <button class="setting-item" id="resetSettingsBtn">
+                        <span>⚙️ Reset Pengaturan</span>
+                        <span class="arrow">→</span>
+                    </button>
+                </section>
+
+                <!-- About Section -->
+                <section class="settings-section">
+                    <h2>ℹ️ Tentang Aplikasi</h2>
+                    
+                    <div class="about-card">
+                        <h3>UR WORLD</h3>
+                        <p>Versi 1.0.0</p>
+                        <p class="about-desc">
+                            Platform pembelajaran sains interaktif yang menyenangkan. 
+                            Jelajahi dunia fisika dan biologi dengan cara yang mudah dipahami.
+                        </p>
+                        <div class="about-links">
+                            <a href="#" class="about-link">📖 Panduan Pengguna</a>
+                            <a href="#" class="about-link">💬 Kirim Feedback</a>
+                            <a href="#" class="about-link">⭐ Beri Rating</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        
+        <!-- Bottom Navigation -->
+        <nav class="app-bottom-nav">
+            <a href="pilih-dunia.html" aria-label="Home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                <span>Beranda</span>
+            </a>
+            <a href="profile.html" aria-label="Profil">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span>Profil</span>
+            </a>
+        </nav>
+
+        <!-- Sidebar Menu -->
+        <div id="sidebarOverlay" class="sidebar-overlay"></div>
+        <aside id="sidebarMenu" class="sidebar-menu">
+            <div class="sidebar-header">
+                <h3>Menu</h3>
+                <button id="sidebarClose" class="sidebar-close" aria-label="Tutup menu">&times;</button>
+            </div>
+            <div class="sidebar-content">
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item">
+                        <a href="pilih-dunia.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">🏠</span>
+                            <span>Beranda</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="dunia-fisika.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">⚛️</span>
+                            <span>Dunia Fisika</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="dunia-biologi.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">🧬</span>
+                            <span>Dunia Biologi</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="profile.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">👤</span>
+                            <span>Profil Saya</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="settings.html" class="sidebar-nav-link active">
+                            <span class="sidebar-nav-icon">⚙️</span>
+                            <span>Pengaturan</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="welcome.html" class="sidebar-nav-link">
+                            <span class="sidebar-nav-icon">🚪</span>
+                            <span>Keluar</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script src="./nav.js"></script>
+    <script src="./settings.js"></script>
+    <script src="./icons.js"></script>
+</body>
+</html>

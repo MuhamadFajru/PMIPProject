@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - UR WORLD</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./icons.css">
+</head>
+<body class="page-signup">
+    <div class="app-wrapper">
+        <div class="auth-container">
+            <div class="top-section">
+                <nav class="navigation">
+                    <a href="welcome.html">
+                         <svg class="icon icon-sm stroke-only" style="margin-right: 4px; vertical-align: -2px;"><use href="#icon-arrow-left"></use></svg>
+                         Kembali
+                    </a>
+                </nav>
+                <div class="welcome-text">
+                    <h1>Halo!</h1>
+                    <p>Mari bergabung dengan UR WORLD</p>
+                </div>
+                <img src="./Asset/MASCOT.png" alt="Maskot UR WORLD" class="mascot">
+            </div>
+
+            <div class="bottom-section">
+                <div class="auth-form-card">
+                    <h2>Daftar</h2>
+                    <form action="login.html" method="POST" id="signupForm">
+                        <div class="input-group">
+                            <label for="fullname">Nama Lengkap</label>
+                            <input 
+                                type="text" 
+                                id="fullname"
+                                name="fullname"
+                                placeholder="Nama Lengkap" 
+                                required
+                                autocomplete="name">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input 
+                                type="email" 
+                                id="email"
+                                name="email"
+                                placeholder="Alamat Email" 
+                                required
+                                autocomplete="email">
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input 
+                                type="password" 
+                                id="password"
+                                name="password"
+                                placeholder="Password (Min. 6 Karakter)" 
+                                required
+                                autocomplete="new-password"
+                                minlength="6">
+                        </div>
+                        <div class="input-group">
+                            <label for="confirm_password">Konfirmasi Password</label>
+                            <input 
+                                type="password" 
+                                id="confirm_password"
+                                name="confirm_password"
+                                placeholder="Ulangi Password" 
+                                required
+                                autocomplete="new-password"
+                                minlength="6">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary-green">Daftar</button>
+                    </form>
+                    
+                    <p class="bottom-link">
+                        Sudah punya akun? <a href="login.html">Masuk</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./icons.js"></script>
+    <script src="./nav.js"></script>
+</body>
+</html>

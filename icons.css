@@ -1,0 +1,84 @@
+/* =========================================
+   MODERN SVG ICONS SYSTEM (PROFESSIONAL REVISION)
+   ========================================= */
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 2; /* Ditetapkan secara eksplisit */
+    stroke-linecap: round; /* Ditingkatkan untuk desain yang lebih halus */
+    stroke-linejoin: round; /* Ditingkatkan untuk desain yang lebih halus */
+    transition: all 0.3s ease;
+}
+
+.icon-sm {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-md {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-lg {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-xl {
+    width: 48px;
+    height: 48px;
+}
+
+/* Icon Backgrounds for Category/Module Icons */
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    min-width: 50px; /* Ditambahkan agar tidak mengecil */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2); /* Background lebih transparan */
+    backdrop-filter: blur(10px);
+}
+
+/* Specific Icon Styles - Mengatur Stroke/Fill */
+.icon-wrapper .icon {
+    stroke-width: 1.8; /* Sedikit lebih tipis */
+    fill: none;
+}
+
+.icon-wrapper:hover .icon {
+    fill: none;
+    stroke: currentColor;
+}
+
+.icon-physics .icon {
+    stroke: #667eea;
+}
+
+.icon-biology .icon {
+    stroke: #f5576c;
+}
+
+/* Tambahan untuk ikon yang harus memiliki fill (seperti di achievement/stat card) */
+.icon.fill-only {
+    stroke: none;
+    fill: currentColor;
+}
+
+.icon.stroke-only {
+    fill: none;
+    stroke: currentColor;
+}
+
+/* SVG Icon Definitions */
+.svg-icons {
+    display: none;
+}
