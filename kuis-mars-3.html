@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Mars 3 - UR WORLD</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./components.css">
+    <link rel="stylesheet" href="./icons.css">
+</head>
+<body class="page-app page-kuis">
+    <div class="app-wrapper">
+        <div class="app-container">
+            <header class="app-header-green">
+                <nav class="app-nav">
+                    <a href="kuis-mars-2.html">
+                        <svg class="icon icon-sm"><use href="#icon-arrow-left"></use></svg> Kembali
+                    </a>
+                    <button id="menuToggle" class="menu-toggle"><svg class="icon"><use href="#icon-menu"></use></svg></button>
+                    <a href="pilih-dunia.html" id="nextQuiz" class="hidden">Selesai &gt;</a>
+                </nav>
+                <div class="app-header-content">
+                    <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                </div>
+            </header>
+            
+            <main class="app-content-white" id="quizContainer">
+                <div class="quiz-header">
+                    <h2>Pertanyaan 3 dari 3</h2>
+                    <p>Kuis Fisika - Mars (Hukum Newton)</p>
+                </div>
+
+                <p class="quiz-question">
+                    Hukum III Newton menyatakan bahwa setiap aksi memiliki reaksi yang...
+                </p>
+
+                <div class="quiz-options" id="quizOptions">
+                    <button class="quiz-option" data-correct="false">
+                        <span>Lebih besar dan searah</span>
+                        <span class="quiz-icon"></span>
+                    </button>
+                    <button class="quiz-option" data-correct="false">
+                        <span>Lebih kecil dan berlawanan arah</span>
+                        <span class="quiz-icon"></span>
+                    </button>
+                    <button class="quiz-option" data-correct="true">
+                        <span>Sama besar tetapi berlawanan arah</span>
+                        <span class="quiz-icon"></span>
+                    </button>
+                    <button class="quiz-option" data-correct="false">
+                        <span>Sama besar dan searah</span>
+                        <span class="quiz-icon"></span>
+                    </button>
+                </div>
+
+                <div class="feedback-box hidden" id="feedbackBox">
+                    <p id="feedbackText"></p>
+                </div>
+
+                <div class="next-btn-container">
+                    <button class="btn btn-next hidden" id="nextBtn">SELESAI</button>
+                </div>
+            </main>
+        </div>
+        
+        <nav class="app-bottom-nav">
+            <a href="pilih-dunia.html"><svg class="icon"><use href="#icon-home"></use></svg><span>Beranda</span></a>
+            <a href="profile.html"><svg class="icon"><use href="#icon-user"></use></svg><span>Profil</span></a>
+        </nav>
+    </div>
+    <script src="./icons.js"></script>
+    <script src="./nav.js"></script>
+    <script src="./quizbaru.js"></script>
+</body>
+</html>
